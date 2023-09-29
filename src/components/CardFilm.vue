@@ -6,8 +6,10 @@ export default {
 <template>
     <div>
         <img src="" alt="">
-        <span class="m-5">{{ film.title }} - {{ film.original_title }} - {{ film.original_language }} - {{
-            film.vote_average
-        }}</span>
+        <span class="m-5">{{ film.title }} - {{ film.original_title }} -
+            <img height="20" :src="'src/assets/img/' + film.original_language + '.png'" alt="">
+            - {{
+                film.vote_average
+            }}</span>
     </div>
 </template>
