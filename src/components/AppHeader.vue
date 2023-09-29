@@ -6,6 +6,11 @@ export default {
         return {
 
         }
+    },
+    methods: {
+        filterFilms() {
+
+        }
     }
 }
 
