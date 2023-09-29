@@ -5,7 +5,9 @@ export default {
 </script>
 <template>
     <div>
-        <img src="https://img.illibraio.it/images/9788893675680_92_310_0_75.jpg" alt="">
-        {{ film.title }}
+        <img src="" alt="">
+        <span class="m-5">{{ film.title }} - {{ film.original_title }} - {{ film.original_language }} - {{
+            film.vote_average
+        }}</span>
     </div>
 </template>

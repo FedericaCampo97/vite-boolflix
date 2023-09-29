@@ -12,6 +12,7 @@ export const store = reactive({
         axios.get(url)
             .then(response => {
                 this.films = response.data.results
+                console.log(this.films);
             })
             .catch(err => console.error(err));
     }
