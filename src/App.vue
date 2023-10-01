@@ -42,21 +42,26 @@ export default {
       </div>
     </nav>
   </header>
-
-  <div>
-    <div v-if="store.films.length > 0">
-      <div class="container">
-        <h5 class="mt-5">Films</h5>
-        <div class="row d-flex flex-wrap">
-          <cardFilm v-for="film in store.films" :film=film class="col-4"></cardFilm>
+  <main>
+    <div>
+      <div v-if="store.films.length > 0" class="pt-4">
+        <div class="container p-4">
+          <h3 class="text-white">FILMS</h3>
+          <div class="row d-flex flex-wrap">
+            <cardFilm v-for="film in store.films" :film=film class="col-4"></cardFilm>
+          </div>
+          <div v-if="store.series.length > 0" class="mt-5">
+            <h3 class="text-white">SERIES</h3>
+            <div class="row d-flex flex-wrap">
+              <cardSerie v-for="serie in store.series" :serie=serie class="col-4"></cardSerie>
+            </div>
+          </div>
         </div>
       </div>
+
     </div>
-    <div v-if="store.series.length > 0">
-      <h5>Series</h5>
-      <cardSerie v-for="serie in store.series" :serie=serie></cardSerie>
-    </div>
-  </div>
+
+  </main>
 </template>
 
 <style lang="scss">

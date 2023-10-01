@@ -11,3 +11,38 @@ input {
 .header_input {
     width: 250px;
 }
+
+main {
+    background-color: rgb(92, 92, 92);
+}
+
+.card_titol {
+    display: none;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    height: 100%;
+    border: 1px solid white;
+
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+        margin-left: 0;
+    }
+}
+
+.film_img {
+    border: 1px solid white;
+}
+
+.block_card:hover {
+    cursor: pointer;
+
+    .card_titol {
+        display: block;
+    }
+
+    .film_img {
+        display: none;
+    }
+
+}

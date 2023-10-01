@@ -4,12 +4,14 @@ export default {
 }
 </script>
 <template>
-    <div>
-        <img src="" alt="">
-        <span class="m-5">{{ serie.name }} - {{ serie.original_name }} -
-            <img height="20" :src="'src/assets/img/' + serie.original_language + '.png'" alt="">
-            - {{
-                serie.vote_average
-            }}</span>
+    <div class="p-3 block_card">
+        <img :src="'https://image.tmdb.org/t/p/w500' + serie.poster_path" alt="" style="width: 100%" class="film_img">
+        <div class="card_titol p-5">
+            <ul>
+                <li><span>Titolo:</span> {{ serie.name }}</li>
+                <li><span>Titolo originale: {{ serie.original_name }}</span></li>
+                <li><span>Voto:</span> {{ serie.vote_average }}</li>
+            </ul>
+        </div>
     </div>
 </template>
