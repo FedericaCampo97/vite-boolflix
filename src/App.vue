@@ -30,15 +30,27 @@ export default {
 </script>
 
 <template>
-  <div class="input-group mb-3 mt-4 container">
-    <input type="text" class="form-control" placeholder="Cerca un film" aria-describedby="button-addon1"
-      v-model="store.query">
-    <button class="btn btn-outline-secondary" type="button" id="button-addon1" @click="filterFilms">VAI</button>
-  </div>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-black">
+      <div class="container d-flex justify-content-between">
+        <a class="navbar-brand titol" href="#">BOOLFLIX</a>
+        <div class="input-group mb-3 mt-4 header_input">
+          <input type="text" class="form-control" placeholder="Cerca un film" aria-describedby="button-addon1"
+            v-model="store.query" @keyup.enter="filterFilms">
+          +
+        </div>
+      </div>
+    </nav>
+  </header>
+
   <div>
     <div v-if="store.films.length > 0">
-      <h5>Films</h5>
-      <cardFilm v-for="film in store.films" :film=film></cardFilm>
+      <div class="container">
+        <h5 class="mt-5">Films</h5>
+        <div class="row d-flex flex-wrap">
+          <cardFilm v-for="film in store.films" :film=film class="col-4"></cardFilm>
+        </div>
+      </div>
     </div>
     <div v-if="store.series.length > 0">
       <h5>Series</h5>
