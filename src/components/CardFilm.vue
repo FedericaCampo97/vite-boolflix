@@ -11,6 +11,7 @@ export default {
                 <li><span>Titolo:</span> {{ film.title }}</li>
                 <li><span>Titolo originale:</span> {{ film.original_title }}</li>
                 <li><span>Voto:</span> {{ film.vote_average }}</li>
+                <li><span>Overview:</span> {{ film.overview }}</li>
             </ul>
         </div>
     </div>

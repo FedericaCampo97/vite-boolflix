@@ -11,6 +11,7 @@ export default {
                 <li><span>Titolo:</span> {{ serie.name }}</li>
                 <li><span>Titolo originale: {{ serie.original_name }}</span></li>
                 <li><span>Voto:</span> {{ serie.vote_average }}</li>
+                <li><span>Overview:</span> {{ serie.overview }}</li>
             </ul>
         </div>
     </div>
